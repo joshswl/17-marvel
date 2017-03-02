@@ -1,0 +1,20 @@
+.container {
+  max-width: 70rem;
+  margin: auto;
+}
+
+.top-nav {
+  background: #2B3E50;
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    padding: 0.2rem 1rem;
+    width: 80%;
+    color: #ECF0F1;
+
+    &--actual {
+
+    }
+  }
+}
