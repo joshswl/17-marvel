@@ -1,5 +1,5 @@
 .container {
-  max-width: 70rem;
+  max-width: $m-container-width;
   margin: auto;
 }
 
@@ -9,12 +9,58 @@
   justify-content: center;
 
   &__text {
-    padding: 0.2rem 1rem;
-    width: 80%;
+    width: 75%;
     color: #ECF0F1;
+    font-family: $c-brand-font-special;
 
     &--actual {
 
     }
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+
+  &__sidebar {
+    width: 25%;
+
+    &--character {
+
+    }
+
+    &--photo {
+
+    }
+
+    &--title {
+
+    }
+
+    &--years {
+      font-size: 14px;
+    }
+
+    &--creators {
+
+      &__title {
+        font-family: $c-brand-font-special;
+        border-bottom: $b-brand-border;
+      }
+
+      &__list {
+        font-size: 13px;
+
+        &--item {
+
+        }
+      }
+    }
+  }
+
+  &__main {
+    width: 50%;
   }
 }
