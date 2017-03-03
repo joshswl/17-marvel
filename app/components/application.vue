@@ -57,6 +57,9 @@
                     <div class="content__main--grid__item--text">
                       <p class="content__main--grid__item--number">#1</p>
                       <p class="content__main--grid__item--name">Placeholder Comic (2010) #1</p>
+                      <div class="content__main--grid__item--button">
+                        <p class="content__main--grid__item--button__actual">Read More</p>
+                      </div>
                     </div>
                   </li>
                   <li class="content__main--grid__item">
@@ -64,6 +67,9 @@
                     <div class="content__main--grid__item--text">
                       <p class="content__main--grid__item--number">#2</p>
                       <p class="content__main--grid__item--name">Placeholder Comic (2010) #2</p>
+                      <div class="content__main--grid__item--button">
+                        <p class="content__main--grid__item--button__actual">Read More</p>
+                      </div>
                     </div>
                   </li>
                   <li class="content__main--grid__item">
@@ -71,6 +77,9 @@
                     <div class="content__main--grid__item--text">
                       <p class="content__main--grid__item--number">#3</p>
                       <p class="content__main--grid__item--name">Placeholder Comic (2010) #3</p>
+                      <div class="content__main--grid__item--button">
+                        <p class="content__main--grid__item--button__actual">Read More</p>
+                      </div>
                     </div>
                   </li>
                   <li class="content__main--grid__item">
@@ -78,6 +87,9 @@
                     <div class="content__main--grid__item--text">
                       <p class="content__main--grid__item--number">#4</p>
                       <p class="content__main--grid__item--name">Placeholder Comic (2010) #4</p>
+                      <div class="content__main--grid__item--button">
+                        <p class="content__main--grid__item--button__actual">Read More</p>
+                      </div>
                     </div>
                   </li>
                 </ul>

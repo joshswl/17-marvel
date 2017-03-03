@@ -4,13 +4,13 @@
 }
 
 .top-nav {
-  background: #2B3E50;
+  background: $c-brand-navy;
   display: flex;
   justify-content: center;
 
   &__text {
     width: 75%;
-    color: #ECF0F1;
+    color: $c-brand-white;
     font-family: $c-brand-font-special;
 
     &--actual {
@@ -72,9 +72,22 @@
       font-size: 14px;
 
       &__item {
+        padding: 0.5rem;
 
         &--name {
           font-size: 12px;
+        }
+
+        &--button {
+          color: $c-brand-white;
+          background: $c-brand-navy;
+          border-radius: $m-brand-border-radius;
+          text-align: center;
+
+          &__actual {
+            padding: 0.4rem 0.5rem;
+            font-size: 9px;
+          }
         }
       }
     }
