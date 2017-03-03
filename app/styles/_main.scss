@@ -102,11 +102,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 12px;
-  background: white;
+  background: grey;
 
   &__button {
     display: flex;
     flex-direction: row-reverse;
+
+    &--actual {
+      border: none;
+      background: transparent;
+    }
   }
 
   &__text {
