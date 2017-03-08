@@ -116,7 +116,13 @@ export default {
   },
 
   methods: {
+    model() {
+      this.showModel = true;
+    },
 
+    close() {
+      this.showModel = false;
+    }
   },
 };
 </script>
