@@ -8,3 +8,7 @@ function seriesInfo(state = null, action) {
       return state;
   }
 }
+
+export default combineReducers({
+  seriesInfo
+});

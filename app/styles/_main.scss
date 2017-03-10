@@ -76,8 +76,12 @@
       &__item {
         padding: 0.5rem;
 
+        &--text {
+          font-size: 16px;
+        }
+
         &--name {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         &--button {
@@ -88,7 +92,7 @@
 
           &__actual {
             width: 100%;
-            padding: 0.4rem 0.5rem;
+            padding: 0.5rem;
             font-size: 10px;
           }
         }

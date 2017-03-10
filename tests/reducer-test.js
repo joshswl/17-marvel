@@ -6,7 +6,7 @@ module('reducer', () => {
   });
 });
 
-test('When loading series info replace the old series info', (assert) => {
+test('When loading series info, replace the old series info', (assert) => {
   const oldState = { characterData: [], comicData: [], seriesInfo: null, modal: null };
   const action = { type: 'SERIES_INFO@LOAD_COMPLETE', data: { name: 'Spiderman' } };
   const expectedState = { characterData: [], comicData: [], seriesInfo: { name: 'Spiderman' }, modal: null };
