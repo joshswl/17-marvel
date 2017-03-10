@@ -4,21 +4,23 @@
 }
 
 .top-nav {
+  padding: 0;
   background: $c-brand-navy;
-  display: flex;
-  justify-content: center;
-
-  &__text {
-    width: 75%;
-    color: $c-brand-white;
-    font-family: $c-brand-font-special;
-
-    &--actual {
-
-    }
-  }
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.navlist {
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+  color: $c-brand-white;
+  font-family: $c-brand-font-special;
+}
 
 .title {
   font-family: $c-brand-font-special;
@@ -47,13 +49,13 @@
     }
 
     &--years {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     &--creators {
 
       &__list {
-        font-size: 12px;
+        font-size: 14px;
 
         &--item {
 
@@ -63,8 +65,8 @@
   }
 
   &__main {
-    padding: 0rem 1.5rem;
     width: 60%;
+    padding: 0 1.5rem;
 
     &--grid {
       display: flex;
@@ -75,18 +77,19 @@
         padding: 0.5rem;
 
         &--name {
-          font-size: 12px;
+          font-size: 14px;
         }
 
         &--button {
-          color: $c-brand-white;
-          background: $c-brand-navy;
           border-radius: $m-brand-border-radius;
+          background: $c-brand-navy;
+          color: $c-brand-white;
           text-align: center;
 
           &__actual {
+            width: 100%;
             padding: 0.4rem 0.5rem;
-            font-size: 9px;
+            font-size: 10px;
           }
         }
       }
@@ -96,21 +99,21 @@
 
 .pop-up {
   position: fixed;
-  padding: 0.5rem 1rem;
-  width: 80%;
   top: 50%;
   left: 50%;
+  width: 80%;
+  padding: 0.5rem 1rem;
   transform: translate(-50%, -50%);
-  font-size: 12px;
-  background: $c-brand-white;
   border: 1px solid grey;
+  background: $c-brand-white;
+  font-size: 12px;
 
   &__button {
     display: flex;
     flex-direction: row-reverse;
 
     &--actual {
-      border: none;
+      border: 0;
       background: transparent;
     }
   }
