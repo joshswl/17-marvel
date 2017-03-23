@@ -30,7 +30,7 @@
               </div>
             </div>
             <div class="content__main">
-              <div class="content__main--characters">
+              <div v-if="series" class="content__main--characters">
                 <h1 class="title">Characters</h1>
                 <ul class="content__main--grid">
                   <li class="content__main--grid__item">
@@ -111,20 +111,25 @@
 </template>
 
 <script>
+
+import Store from '../store.js';
+import { seriesInfoSearch } from '../actions.js';
+
 export default {
   data() {
     return {
+      series: this.$select('seriesInfo'),
+      characters: this.$select('characterData'),
+      comics: this.$select('comicData'),
     };
   },
 
-  methods: {
-    model() {
-      this.showModel = true;
-    },
+  created() {
+    store.dispatch(seriesInfoSearch());
+  },
 
-    close() {
-      this.showModel = false;
-    }
+  methods: {
+
   },
 };
 </script>
