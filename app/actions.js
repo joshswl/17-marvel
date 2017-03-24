@@ -32,36 +32,38 @@ export function clearModal() {
   };
 }
 
-export function seriesInfoSearch(name) {
-  return (dispatch) => {
-    fetch(`http://marvel-is-broke.herokuapp.com/series?limit=1&titleStartsWith=${name}`)
-    .then(response => response.json())
-    .then((data) => {
-      const characters = data.data.results;
-    });
-    dispatch(seriesInfoLoadComplete(characters));
-    dispatch(comicsFindForId(characters));
-  };
-}
-
 export function charactersFindForId(id) {
-  return (dispatch) => {
-    fetch(`http://marvel-is-broke.herokuapp.com/series?limit=1&titleStartsWith=${id}`)
+  return (next) => {
+    fetch(`http://marvel-is-broke.herokuapp.com/series/${id}/characters`)
     .then(response => response.json())
     .then((data) => {
-      const comics = data.data.results;
+      next(charactersFindAllComplete(data.data.results));
     });
-    dispatch(charactersFindAllComplete(comics));
   };
 }
 
 export function comicsFindForId(id) {
-  return (dispatch) => {
-    fetch(`http://marvel-is-broke.herokuapp.com/series?limit=1&titleStartsWith=${id}`)
-    .then(response = response.json())
+  return (next) => {
+    fetch(`http://marvel-is-broke.herokuapp.com/series/${id}/comics`)
+    .then(response => response.json())
     .then((data) => {
-      const comics = data.data.results;
+      next(comicsFindAllComplete(data.data.results));
     });
-    dispatch(charactersFindAllComplete(comics));
+  };
+}
+
+export function seriesInfoSearch(name) {
+  return (next) => {
+    fetch(`http://marvel-is-broke.herokuapp.com/series?limit=1&titleStartsWith=${name}`)
+    .then(response => response.json())
+    .then((data) => {
+      const series = data.data.results[0];
+
+      if (series) {
+        next(seriesInfoLoadComplete(series));
+        next(charactersFindForId(series.id));
+        next(comicsFindForId(series.id));
+      }
+    });
   };
 }

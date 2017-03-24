@@ -30,7 +30,8 @@
               </div>
             </div>
             <div class="content__main">
-              <div v-if="series" class="content__main--characters">
+              <series-info :series-data="seriesData">
+              <div v-if="seriesData.id" class="content__main--characters">
                 <h1 class="title">Characters</h1>
                 <ul class="content__main--grid">
                   <li class="content__main--grid__item">
@@ -125,7 +126,7 @@ export default {
   },
 
   created() {
-    store.dispatch(seriesInfoSearch());
+    Store.dispatch(seriesInfoSearch());
   },
 
   methods: {
