@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background: #fefefe;
+  font-family: $c-brand-font-reg;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  border-radius: $m-brand-border-radius;
+}

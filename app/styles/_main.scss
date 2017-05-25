@@ -1,0 +1,128 @@
+.container {
+  max-width: $m-container-width;
+  margin: auto;
+}
+
+.top-nav {
+  padding: 0;
+  background: $c-brand-navy;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.navlist {
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+  color: $c-brand-white;
+  font-family: $c-brand-font-special;
+}
+
+.title {
+  font-family: $c-brand-font-special;
+  margin: 0;
+  border-bottom: $b-brand-border;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+
+  &__sidebar {
+    width: 25%;
+
+    &--character {
+
+    }
+
+    &--photo {
+
+    }
+
+    &--title {
+
+    }
+
+    &--years {
+      font-size: 16px;
+    }
+
+    &--creators {
+
+      &__list {
+        font-size: 14px;
+
+        &--item {
+
+        }
+      }
+    }
+  }
+
+  &__main {
+    width: 60%;
+    padding: 0 1.5rem;
+
+    &--grid {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+      &__item {
+        padding: 0.5rem;
+
+        &--text {
+          font-size: 16px;
+        }
+
+        &--name {
+          font-size: 16px;
+        }
+
+        &--button {
+          border-radius: $m-brand-border-radius;
+          background: $c-brand-navy;
+          color: $c-brand-white;
+          text-align: center;
+
+          &__actual {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  padding: 0.5rem 1rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid grey;
+  background: $c-brand-white;
+  font-size: 12px;
+
+  &__button {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &--actual {
+      border: 0;
+      background: transparent;
+    }
+  }
+
+  &__text {
+
+  }
+}
